@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>House Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                Bedrooms: <input type="number" name='bedrooms' placeholder="Enter the no of Bedrooms"><br>
+                Bathrooms: <input type="number" name='bathrooms' placeholder="Enter the no of Bathrooms"><br>
+                Floors: <input type="number" name='floors' placeholder="Enter the no of Floors"><br>
+                Sqr_Living: <input type="number" name="sqft_live" placeholder="Enter the Square feet of living"><br>
+                Sqr_lot: <input type="number" name="lot" placeholder="Enter the lot in square feet"><br>
+                Year of Build: <input type="number" name='yr_built' placeholder="Enter year of Build"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> House Price is: {{data}}</p>
+        </div>
+
+    </div>
+    <div class="footer">
+    <footer style="color:green;text-align: center;font-family: sans-serif;font-size: large;">
+        <h5>Developed By White Garuda.</h5>
+    </footer>
+    </div>
+
+</body>
+
+</html>

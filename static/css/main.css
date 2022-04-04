@@ -1,0 +1,55 @@
+body{
+    background: white;
+    height: 100vh;
+    background-image: url('../images/pic-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.register_page{
+    width: 360px;
+    margin: auto;
+    background-color: black;
+}
+.form{
+    position: relative;
+    z-index: 1;
+    background: #ffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    background-color: antiquewhite;
+}
+.form input{
+    font-family: 'sans-serif;';
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.submit{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: cornflowerblue;
+}
+
+.form input[type=number]:focus
+{
+    background-color: seagreen;
+}
+
+.footer {
+    color:green;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    background-color: white;
+    position: fixed;
+    
+    bottom: 0;
+    width: 100%;
+}
