@@ -13,9 +13,9 @@ X = df.iloc[:, 0:7]
 y = df.iloc[:, 6:]
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
 
-lr = LinearRegression()
-lr.fit(X_train, y_train)
+reg = LinearRegression()
+reg.fit(X_train, y_train)
 
-pickle.dump(lr, open('model.pkl', 'wb'))
+pickle.dump(reg, open('model.pkl', 'wb'))
